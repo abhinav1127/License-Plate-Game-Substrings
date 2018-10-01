@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LicensePlateGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyC-OR-Y1p">
+                                <rect key="frame" x="163" y="106" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MFR-1W-Y6H"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fKl-q7-bnL">
+                                <rect key="frame" x="0.0" y="160" width="375" height="507"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="udu-0z-ZyC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="UQw-to-GDJ"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGx-bu-8n7">
+                                <rect key="frame" x="115" y="66" width="144" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8Bi-aK-k5d"/>
+                                    <constraint firstAttribute="width" constant="144" id="L7g-Zg-icX"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NGx-bu-8n7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="57x-OV-ugl"/>
+                            <constraint firstItem="jyC-OR-Y1p" firstAttribute="top" secondItem="NGx-bu-8n7" secondAttribute="bottom" constant="10" id="CLk-L9-bLw"/>
+                            <constraint firstItem="fKl-q7-bnL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Lrh-PR-1yy"/>
+                            <constraint firstItem="fKl-q7-bnL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QOv-Yi-WYV"/>
+                            <constraint firstItem="NGx-bu-8n7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VvR-KF-6Tb"/>
+                            <constraint firstItem="fKl-q7-bnL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YRc-V6-39H"/>
+                            <constraint firstItem="fKl-q7-bnL" firstAttribute="top" secondItem="jyC-OR-Y1p" secondAttribute="bottom" constant="24" id="eD4-ab-nLt"/>
+                            <constraint firstItem="fKl-q7-bnL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="juJ-tr-bXI"/>
+                            <constraint firstItem="jyC-OR-Y1p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uMt-xB-QWR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="subsequenceField" destination="NGx-bu-8n7" id="Lje-LP-uhy"/>
+                        <outlet property="wordsTable" destination="fKl-q7-bnL" id="zRG-w6-4W6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
